@@ -1,65 +1,3 @@
-//      .edee...      .....       .eeec.   ..eee..
-//    .d*"  """"*e..d*"""""**e..e*""  "*c.d""  ""*e.
-//   z"           "$          $""       *F         **e.
-//  z"             "c        d"          *.           "$.
-// .F                        "            "            'F
-// d                                                   J%
-// 3         .                                        e"
-// 4r       e"              .                        d"
-//  $     .d"     .        .F             z ..zeeeeed"
-//  "*beeeP"      P        d      e.      $**""    "
-//      "*b.     Jbc.     z*%e.. .$**eeeeP"
-//         "*beee* "$$eeed"  ^$$$""    "
-//                  '$$.     .$$$c
-//                   "$$.   e$$*$$c
-//                    "$$..$$P" '$$r
-//                     "$$$$"    "$$.           .d
-//         z.          .$$$"      "$$.        .dP"
-//         ^*e        e$$"         "$$.     .e$"
-//           *b.    .$$P"           "$$.   z$"
-//            "$c  e$$"              "$$.z$*"
-//             ^*e$$P"                "$$$"
-//               *$$                   "$$r
-//               '$$F                 .$$P
-//                $$$                z$$"
-//                4$$               d$$b.
-//                .$$%            .$$*"*$$e.
-//             e$$$*"            z$$"    "*$$e.
-//            4$$"              d$P"        "*$$e.
-//            $P              .d$$$c           "*$$e..
-//           d$"             z$$" *$b.            "*$L
-//          4$"             e$P"   "*$c            ^$$
-//          $"            .d$"       "$$.           ^$r
-//         dP            z$$"         ^*$e.          "b
-//        4$            e$P             "$$           "
-//                     J$F               $$
-//                     $$               .$F
-//                    4$"               $P"
-//                    $"               dP    Gilo94'
-// https://www.asciiart.eu/nature/lightning
-//  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄         ▄  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄
-// ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌       ▐░▌▐░░▌      ▐░▌▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-//  ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌░▌     ▐░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
-//      ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌▐░▌    ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌
-//      ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░▌ ▐░▌   ▐░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
-//      ▐░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌  ▐░▌  ▐░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
-//      ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌   ▐░▌ ▐░▌▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀█░█▀▀
-//      ▐░▌     ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌    ▐░▌▐░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░▌
-//      ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░▌     ▐░▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌
-//      ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌      ▐░░▌▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░▌       ▐░▌
-//       ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀        ▀▀  ▀▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀
-//
-//  ▄            ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄        ▄
-// ▐░▌          ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░▌      ▐░▌
-// ▐░▌          ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░▌░▌     ▐░▌
-// ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌▐░▌    ▐░▌
-// ▐░▌          ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░▌ ▐░▌   ▐░▌
-// ▐░▌          ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌  ▐░▌  ▐░▌
-// ▐░▌          ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀█░▌▐░▌   ▐░▌ ▐░▌
-// ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌    ▐░▌▐░▌
-// ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░▌     ▐░▐░▌
-// ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌      ▐░░▌
-//  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀        ▀▀
 // SPDX-License-Identifier: AGPL-3.0-only
 pragma solidity 0.8.20;
 
@@ -73,6 +11,8 @@ import { UUPSUpgradeable } from "@openzeppelin/contracts-upgradeable/proxy/utils
 import { OracleUpgradeable } from "./OracleUpgradeable.sol";
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 import { IFlashLoanReceiver } from "../interfaces/IFlashLoanReceiver.sol";
+
+//SafeERC20 It’s a helper to make safe the interaction with someone else’s ERC20 token, in your contracts.
 
 contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, OracleUpgradeable {
     error ThunderLoan__NotAllowedToken(IERC20 token);
@@ -94,7 +34,7 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
     mapping(IERC20 => AssetToken) public s_tokenToAssetToken;
 
     // The fee in WEI, it should have 18 decimals. Each flash loan takes a flat fee of the token price.
-    uint256 private s_feePrecision;
+    uint256 private s_feePrecision; //slot2
     uint256 private s_flashLoanFee; // 0.3% ETH fee
 
     mapping(IERC20 token => bool currentlyFlashLoaning) private s_currentlyFlashLoaning;
@@ -138,12 +78,20 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
                            EXTERNAL FUNCTIONS
     //////////////////////////////////////////////////////////////*/
     function initialize(address tswapAddress) external initializer {
+        //@audit-issue we need poolfactory address, not tswapAddress
         __Ownable_init(msg.sender);
         __UUPSUpgradeable_init();
         __Oracle_init(tswapAddress);
-        s_feePrecision = 1e18;
+        s_feePrecision = 1e18; //@audit-issue magic numbers
         s_flashLoanFee = 3e15; // 0.3% ETH fee
     }
+    /*////////////////////////////////////////////////////////////// 
+                           DEPOSIT
+    //     Using IERC20 instead of address for token parameters in Solidity functions is a best practice for interacting
+    with ERC20 tokens. It provides type safety, improves code readability, and allows for direct interaction with the
+    ERC20 standard functions.
+                    
+    //////////////////////////////////////////////////////////////*/
 
     function deposit(IERC20 token, uint256 amount) external revertIfZero(amount) revertIfNotAllowedToken(token) {
         AssetToken assetToken = s_tokenToAssetToken[token];
@@ -151,7 +99,11 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
         uint256 mintAmount = (amount * assetToken.EXCHANGE_RATE_PRECISION()) / exchangeRate;
         emit Deposit(msg.sender, token, amount);
         assetToken.mint(msg.sender, mintAmount);
+
+        //calculates the fee of borrowing this amount of tokens in flashloan
         uint256 calculatedFee = getCalculatedFee(token, amount);
+        // uint256 valueOfDepositedToken = (amount * getPriceInWeth(address(token))) / s_feePrecision;
+        //@audit-issue we must update exchangeRate with amount deposited  in weth not calculatedFee
         assetToken.updateExchangeRate(calculatedFee);
         token.safeTransferFrom(msg.sender, address(assetToken), amount);
     }
@@ -159,6 +111,9 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
     /// @notice Withdraws the underlying token from the asset token
     /// @param token The token they want to withdraw from
     /// @param amountOfAssetToken The amount of the underlying they want to withdraw
+    /*//////////////////////////////////////////////////////////////
+                           REDEEM
+    //////////////////////////////////////////////////////////////*/
     function redeem(
         IERC20 token,
         uint256 amountOfAssetToken
@@ -167,6 +122,7 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
         revertIfZero(amountOfAssetToken)
         revertIfNotAllowedToken(token)
     {
+        //@audit-issue why we do not update exchange-rate
         AssetToken assetToken = s_tokenToAssetToken[token];
         uint256 exchangeRate = assetToken.getExchangeRate();
         if (amountOfAssetToken == type(uint256).max) {
@@ -177,6 +133,9 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
         assetToken.burn(msg.sender, amountOfAssetToken);
         assetToken.transferUnderlyingTo(msg.sender, amountUnderlying);
     }
+    /*//////////////////////////////////////////////////////////////
+                           FLASHLOAN
+    //////////////////////////////////////////////////////////////*/
 
     function flashloan(
         address receiverAddress,
@@ -189,7 +148,8 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
         revertIfNotAllowedToken(token)
     {
         AssetToken assetToken = s_tokenToAssetToken[token];
-        uint256 startingBalance = IERC20(token).balanceOf(address(assetToken));
+        //uint256 startingBalance = IERC20(token).balanceOf(address(assetToken));
+        uint256 startingBalance = token.balanceOf(address(assetToken));
 
         if (amount > startingBalance) {
             revert ThunderLoan__NotEnoughTokenBalance(startingBalance, amount);
@@ -202,12 +162,16 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
         uint256 fee = getCalculatedFee(token, amount);
         // slither-disable-next-line reentrancy-vulnerabilities-2 reentrancy-vulnerabilities-3
         assetToken.updateExchangeRate(fee);
-
+        //@audit-issue
         emit FlashLoan(receiverAddress, token, amount, fee, params);
 
         s_currentlyFlashLoaning[token] = true;
         assetToken.transferUnderlyingTo(receiverAddress, amount);
-        // slither-disable-next-line unused-return reentrancy-vulnerabilities-2
+        // slithtokenA.balanceOf(address(receiver3))er-disable-next-line unused-return reentrancy-vulnerabilities-2
+        //@audit-issue
+        ////////////////////////////////////////////////////s
+        //receiverAddress.functionCall is target  in functionCall
+        //
         receiverAddress.functionCall(
             abi.encodeCall(
                 IFlashLoanReceiver.executeOperation,
@@ -218,15 +182,41 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
                     msg.sender, // initiator
                     params
                 )
-            )
+            ) // external call to function of  another contract and now waits its finish
         );
-
+        /**
+         * receiverAddress.functionCall(
+         * abi.encodeWithSignature(
+         *     "IFlashLoanReceivers.executeOperation(address,uint256,uint256,address,bytes)",
+         *     address(token),
+         *     amount,
+         *     fee,
+         *     msg.sender, // initiator
+         *     params
+         * )
+         * );
+         */
+        /**
+         * receiverAddress.functionCall(
+         * abi.encodeWithSelector(
+         *     IFlashLoanReceiver.executeOperation.selector,
+         *     address(token),
+         *     amount,
+         *     fee,
+         *     msg.sender, // initiator
+         *     params
+         * )
+         * );
+         */
         uint256 endingBalance = token.balanceOf(address(assetToken));
         if (endingBalance < startingBalance + fee) {
             revert ThunderLoan__NotPaidBack(startingBalance + fee, endingBalance);
         }
         s_currentlyFlashLoaning[token] = false;
     }
+    /*//////////////////////////////////////////////////////////////
+                           REPAY FUNCTION
+    //////////////////////////////////////////////////////////////*/
 
     function repay(IERC20 token, uint256 amount) public {
         if (!s_currentlyFlashLoaning[token]) {
@@ -235,6 +225,9 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
         AssetToken assetToken = s_tokenToAssetToken[token];
         token.safeTransferFrom(msg.sender, address(assetToken), amount);
     }
+    /*//////////////////////////////////////////////////////////////
+                     setAllowedToken      FUNCTION
+    //////////////////////////////////////////////////////////////*/
 
     function setAllowedToken(IERC20 token, bool allowed) external onlyOwner returns (AssetToken) {
         if (allowed) {
@@ -254,20 +247,37 @@ contract ThunderLoan is Initializable, OwnableUpgradeable, UUPSUpgradeable, Orac
             return assetToken;
         }
     }
+    /*//////////////////////////////////////////////////////////////
+                           getCalculatedFee FUNCTION
+    //////////////////////////////////////////////////////////////*/
 
     function getCalculatedFee(IERC20 token, uint256 amount) public view returns (uint256 fee) {
         //slither-disable-next-line divide-before-multiply
         uint256 valueOfBorrowedToken = (amount * getPriceInWeth(address(token))) / s_feePrecision;
+        //@audit-issue the value will be less than it really are because of getPriceInWeth function
         //slither-disable-next-line divide-before-multiply
         fee = (valueOfBorrowedToken * s_flashLoanFee) / s_feePrecision;
     }
+
+    function getCalculatedFee2(uint256 amount) public view returns (uint256 fee) {
+        //slither-disable-next-line divide-before-multiply
+        //@audit-issue the value will be less than it really are because of getPriceInWeth function
+        //slither-disable-next-line divide-before-multiply
+        fee = (amount * s_flashLoanFee) / s_feePrecision;
+    }
+    /*//////////////////////////////////////////////////////////////
+                           updateFlashLoanFee FUNCTION
+    //////////////////////////////////////////////////////////////*/
 
     function updateFlashLoanFee(uint256 newFee) external onlyOwner {
         if (newFee > s_feePrecision) {
             revert ThunderLoan__BadNewFee();
         }
+        //@audit-issue no event emited
         s_flashLoanFee = newFee;
     }
+    ///////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////
 
     function isAllowedToken(IERC20 token) public view returns (bool) {
         return address(s_tokenToAssetToken[token]) != address(0);

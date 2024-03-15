@@ -9,17 +9,18 @@ contract OracleUpgradeable is Initializable {
     address private s_poolFactory;
 
     function __Oracle_init(address poolFactoryAddress) internal onlyInitializing {
-        __Oracle_init_unchained(poolFactoryAddress);
-    }
+        __Oracle_init_unchained(poolFactoryAddress); // call only when initializing
+    } //@audit-issue no zero-check
 
     function __Oracle_init_unchained(address poolFactoryAddress) internal onlyInitializing {
         s_poolFactory = poolFactoryAddress;
-    }
+    } //@audit-issue no zero-check
 
     function getPriceInWeth(address token) public view returns (uint256) {
         address swapPoolOfToken = IPoolFactory(s_poolFactory).getPool(token);
-        return ITSwapPool(swapPoolOfToken).getPriceOfOnePoolTokenInWeth();
-    }
+        return ITSwapPool(swapPoolOfToken).getPriceOfOnePoolTokenInWeth(); //@audit-issue in oracle. It returns the
+            // price for 99,7 % of token
+    } // in the certain pool, the certain token
 
     function getPrice(address token) external view returns (uint256) {
         return getPriceInWeth(token);

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+/* SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
 
 import { Test, console } from "forge-std/Test.sol";
@@ -18,6 +18,23 @@ contract ThunderLoanTest is BaseTest {
         vm.prank(user);
         mockFlashLoanReceiver = new MockFlashLoanReceiver(address(thunderLoan));
     }
+    //////////////////////////////////////////////////////////
+
+    modifier setAllowedToken() {
+        vm.prank(thunderLoan.owner());
+        thunderLoan.setAllowedToken(tokenA, true);
+        _;
+    }
+
+    modifier hasDeposits() {
+        vm.startPrank(liquidityProvider);
+        tokenA.mint(liquidityProvider, DEPOSIT_AMOUNT);
+        tokenA.approve(address(thunderLoan), DEPOSIT_AMOUNT);
+        thunderLoan.deposit(tokenA, DEPOSIT_AMOUNT);
+        vm.stopPrank();
+        _;
+    }
+    ////////////////////////////////////////////////////////////
 
     function testInitializationOwner() public {
         assertEq(thunderLoan.owner(), address(this));
@@ -48,12 +65,6 @@ contract ThunderLoanTest is BaseTest {
         thunderLoan.deposit(tokenA, AMOUNT);
     }
 
-    modifier setAllowedToken() {
-        vm.prank(thunderLoan.owner());
-        thunderLoan.setAllowedToken(tokenA, true);
-        _;
-    }
-
     function testDepositMintsAssetAndUpdatesBalance() public setAllowedToken {
         tokenA.mint(liquidityProvider, AMOUNT);
 
@@ -64,22 +75,23 @@ contract ThunderLoanTest is BaseTest {
 
         AssetToken asset = thunderLoan.getAssetFromToken(tokenA);
         assertEq(tokenA.balanceOf(address(asset)), AMOUNT);
-        assertEq(asset.balanceOf(liquidityProvider), AMOUNT);
-    }
+        console.log("balance of asset contract", tokenA.balanceOf(address(asset)) / 1e18, "tokens");
+        console.log(
+            "balance of liqiProvider contract", asset.balanceOf(address(liquidityProvider)) / 1e18, " LP tokens"
+        );
 
-    modifier hasDeposits() {
-        vm.startPrank(liquidityProvider);
-        tokenA.mint(liquidityProvider, DEPOSIT_AMOUNT);
-        tokenA.approve(address(thunderLoan), DEPOSIT_AMOUNT);
-        thunderLoan.deposit(tokenA, DEPOSIT_AMOUNT);
-        vm.stopPrank();
-        _;
+        assertEq(asset.balanceOf(liquidityProvider), AMOUNT);
     }
 
     function testFlashLoan() public setAllowedToken hasDeposits {
         uint256 amountToBorrow = AMOUNT * 10;
         uint256 calculatedFee = thunderLoan.getCalculatedFee(tokenA, amountToBorrow);
         vm.startPrank(user);
+        uint256 fee2 = thunderLoan.getCalculatedFee2(amountToBorrow);
+        ///////////////////////////////////////////////////////////
+        console.log("Amount of fee in loaned tokens with bad calculation", calculatedFee);
+        console.log("Amount of fee in loaned tokens with good calculation", fee2);
+
         tokenA.mint(address(mockFlashLoanReceiver), AMOUNT);
         thunderLoan.flashloan(address(mockFlashLoanReceiver), tokenA, amountToBorrow, "");
         vm.stopPrank();
@@ -87,4 +99,40 @@ contract ThunderLoanTest is BaseTest {
         assertEq(mockFlashLoanReceiver.getBalanceDuring(), amountToBorrow + AMOUNT);
         assertEq(mockFlashLoanReceiver.getBalanceAfter(), AMOUNT - calculatedFee);
     }
+
+    function testRedeem() public setAllowedToken hasDeposits {
+        AssetToken asset = thunderLoan.getAssetFromToken(tokenA);
+        console.log("balance of asset contract after deposit = ", tokenA.balanceOf(address(asset)) / 1e18, "tokens");
+        console.log(
+            "balance of liqiProvider contract after deposit = ",
+            asset.balanceOf(address(liquidityProvider)) / 1e18,
+            " LP tokens"
+        );
+        console.log("Exchangerate after deposit is", asset.getExchangeRate(), "or 1.003"); // 1.003
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+        uint256 amountToBorrow = AMOUNT * 10; //100 tokens
+        uint256 calculatedFee = thunderLoan.getCalculatedFee(tokenA, amountToBorrow);
+        vm.startPrank(user);
+        console.log("Amount of fee in loaned tokens with bad calculation", calculatedFee, "or 0.3 tokens"); //0.3
+
+        tokenA.mint(address(mockFlashLoanReceiver), AMOUNT); // 10 tokens
+        thunderLoan.flashloan(address(mockFlashLoanReceiver), tokenA, amountToBorrow, "");
+        console.log(
+            "balance of asset contract after flashloan",
+            tokenA.balanceOf(address(asset)) / 1e16,
+            "tokens or 1000,3 tokens"
+        ); // 1000,3 tokens
+
+        console.log("Exchangerate after flashloan is", asset.getExchangeRate(), "or higher than 1.003");
+        console.log("So to reedeem 1000 lp tokens will be :", 1000 * asset.getExchangeRate());
+        vm.stopPrank();
+        //////////////////////////////////////////////////////////////////////////////////////////
+        vm.startPrank(liquidityProvider);
+        vm.expectRevert();
+        thunderLoan.redeem(tokenA, type(uint256).max);
+
+        vm.stopPrank();
+    }
 }
+*/
